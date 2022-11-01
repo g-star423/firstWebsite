@@ -1,0 +1,45 @@
+body {
+    background-color: peachpuff;
+
+}
+main {
+    height: 1000px;
+}
+header {
+    display: flex;
+    border-bottom: solid black 3px;
+    height: 6em;
+
+}
+#myName {
+    margin: 10px;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    font-size: 5em;
+}
+#headerDiv {
+    flex-grow: 1.5;
+    height: 6em;
+    display: flex;
+}
+#navDiv {
+    flex-grow: 5;
+    height: 6em;
+    display: flex;
+    align-content: flex-end;
+    position: sticky;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Alata', sans-serif;
+    font-size: 2em;
+    width: 99%;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding-top: 1.5em;
+}
+
