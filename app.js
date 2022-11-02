@@ -40,5 +40,8 @@ function logData() {
 }
 
 $(()=>{
-    $('#submitButton').on('click', getWordData);
+    $('#wordForm').on('submit', (event)=>{
+        event.preventDefault();
+        getWordData();
+    });
 })

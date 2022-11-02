@@ -1,45 +1,58 @@
 body {
-    background-color: peachpuff;
+    background-color: rgb(239, 215, 167);
+}
 
-}
-main {
-    height: 1000px;
-}
 header {
     display: flex;
     border-bottom: solid black 3px;
     height: 6em;
-
 }
-#myName {
+main {
+    height: 1000px;
+}
+header h1 {
+    height: 6em;
     margin: 10px;
     text-align: center;
     font-family: 'Staatliches', cursive;
     font-size: 5em;
 }
-#headerDiv {
-    flex-grow: 1.5;
-    height: 6em;
-    display: flex;
-}
-#navDiv {
-    flex-grow: 5;
-    height: 6em;
-    display: flex;
-    align-content: flex-end;
-    position: sticky;
-}
+
 nav {
-    display: flex;
     justify-content: space-evenly;
     font-family: 'Alata', sans-serif;
-    font-size: 2em;
-    width: 99%;
+    font-size: 1.5em;
     text-align: center;
+    align-self: flex-end;
+    margin-left: auto;
 }
 a {
     text-decoration: none;
     color: black;
     padding-top: 1.5em;
-}
 
+}
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+    margin-left: 25px;
+}
+#artCarouselContainer{
+    display: flex;
+    height: 300px;
+    width: 60%;
+}
+.carouselSelector {
+    flex-grow: 1;
+    height: 300px;
+}
+.artImage {
+    display: none;
+}
+#carouselImage img:first-of-type {
+    display: block;
+}
