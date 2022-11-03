@@ -109,30 +109,34 @@ const calculatePerformance = () => {
 
     let portObj = {
         ticker: "TOT PORT",
-        begPrice: "",
-        endPrice: "",
+        begPrice: "n/a",
+        endPrice: "n/a",
         BMV: portfolioOutput[0].BMV + portfolioOutput[1].BMV,
         EMV: portfolioOutput[0].EMV + portfolioOutput[1].EMV,
         return: (((portfolioOutput[0].EMV + portfolioOutput[1].EMV) - (portfolioOutput[0].BMV + portfolioOutput[1].BMV)) / (portfolioOutput[0].BMV + portfolioOutput[1].BMV)).toFixed(2)
     }
     portfolioOutput.push(portObj)
     console.log(portfolioOutput)
+    printPerformance();
 }
 
-function printPerformance() {
-    for (let i = 0; i < samplePortfolio.length; i++) {
+const printPerformance = () => {
+    for (let i = 0; i < portfolioOutput.length; i++) {
         const $tr = $('<tr>');
-        const $th1 = $('<th>');
-        const $th2 = $('<th>');
-        const $th3 = $('<th>');
-        const $th4 = $('<th>');
-        const $th5 = $('<th>');
-        const $th6 = $('<th>');
-        $tr.append($th1, $th2, $th3, $th4, $th5, $th6);
+        const $td1 = $('<td>').text(portfolioOutput[i].ticker);
+        const $td2 = $('<td>').text(portfolioOutput[i].begPrice);
+        const $td3 = $('<td>').text(portfolioOutput[i].endPrice);
+        const $td4 = $('<td>').text(portfolioOutput[i].BMV);
+        const $td5 = $('<td>').text(portfolioOutput[i].EMV);
+        const $td6 = $('<td>').text(portfolioOutput[i].return);
+        $tr.append($td1, $td2, $td3, $td4, $td5, $td6);
         $('#performanceResults').append($tr);
     }
     $('#beginningPriceDisplay').text(`${startDate} Price`)
     $('#endingPriceDisplay').text(`${endDate} Price`)
+    $('th').show()
+    $('td').show()
+    $('tr').show()
 }
 
 $(() => {
