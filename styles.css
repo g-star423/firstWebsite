@@ -126,3 +126,8 @@ th,
 td {
     border: solid black 1px;
 }
+
+.textDiv {
+    width: 90%;
+    max-width: 500px;
+}
