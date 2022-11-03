@@ -30,13 +30,43 @@
     </header>
     <main>
         <p>In this simple stock portfolio return calculator, we are limited to 2 stocks because of API restrictions.</p>
-        <form id="wordForm">
+        <form id="stockForm">
             <input type="text" id="ticker1" placeholder="Stock 1"/>
             <input type="text" id="ticker2" placeholder="Stock 2"/>
             <input type="text" id="quantity1" placeholder="Quantity of Stock 1"/>
-            <input type="text" id="quantity2" placeholder="Quantity of Stock 1"/>
-            <input type="submit" id="ticker2" value="Stock 2"/>
+            <input type="text" id="quantity2" placeholder="Quantity of Stock 2"/>
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" value="2022-01-05" min="2022-01-01" max="2022-11-01">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" value="2022-01-09" min="2022-01-01" max="2022-11-01">
+            <input type="submit" id="submit" value="Submit"/>
         </form>
+        <table id="performanceResults">
+            <tr>
+              <th>Ticker</th>
+              <th id="beginningPriceDisplay">Price</th>
+              <th id="endingPriceDisplay">Price</th>
+              <th>Beginning Market Value</th>
+              <th>Ending Market Value</th>
+              <th>Return</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td>Germany</td>
+              <td>Germany</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Total Portfolio</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+              <td>Mexico</td>
+              <td>Mexico</td>
+              <td>Mexico</td>
+            </tr>
+          </table>
     </main>
 </body>
 </html>
