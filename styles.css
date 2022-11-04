@@ -17,6 +17,10 @@ header h1 {
     font-size: 5vw;
 }
 
+main {
+    align-items: center;
+}
+
 nav {
     justify-content: space-evenly;
     font-family: 'Alata', sans-serif;
@@ -31,6 +35,16 @@ a {
     color: black;
     padding-top: 1.5em;
 
+}
+
+img {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+div {
+    margin: auto;
 }
 
 nav ul {
@@ -52,11 +66,29 @@ nav li {
 
 .carouselSelector {
     flex-grow: 1;
-    height: 300px;
+    height: 400px;
+    color: rgba(255, 166, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.carouselSelector:hover {
+    color: rgba(255, 166, 0, 1);
+}
+
+#artCarouselRight {
+    margin-left: -25px;
+}
+
+#artCarouselLeft {
+    margin-right: -25px;
+    text-align: right;
 }
 
 .artImage {
+    margin-top: 0;
     display: none;
+    height: 400px;
 }
 
 #carouselImage img:first-of-type {
@@ -130,4 +162,8 @@ td {
 .textDiv {
     width: 90%;
     max-width: 500px;
+}
+
+#bioPic {
+    width: 200px;
 }

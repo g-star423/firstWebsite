@@ -1,12 +1,13 @@
 const artArr = ['https://i.imgur.com/Aw8Oh1i.jpg', 'https://i.imgur.com/abw5kJU.jpg', 'https://i.imgur.com/ZR3gN3P.jpg'];
+const artExplanations = ['Title: Moneyshot<br>This painting ', 'movement', 'self portrait']
 let currentImgIndex = 0;
-let numOfImages = artArr.length -1;
+let numOfImages = artArr.length - 1;
 
 
 
-function carouselLeft () {
+function carouselLeft() {
     console.log('carousel left');
-    if (currentImgIndex > 0){
+    if (currentImgIndex > 0) {
         $('#carouselImage').children().eq(currentImgIndex).css('display', 'none');
         currentImgIndex--;
         $('#carouselImage').children().eq(currentImgIndex).css('display', 'block');
@@ -18,9 +19,9 @@ function carouselLeft () {
 
 }
 
-function carouselRight () {
+function carouselRight() {
     console.log('carousel right');
-    if (currentImgIndex < numOfImages){
+    if (currentImgIndex < numOfImages) {
         $('#carouselImage').children().eq(currentImgIndex).css('display', 'none');
         currentImgIndex++;
         $('#carouselImage').children().eq(currentImgIndex).css('display', 'block');
@@ -32,7 +33,7 @@ function carouselRight () {
 }
 
 $(() => {
-    for(let i = 0; i < artArr.length; i++) {
+    for (let i = 0; i < artArr.length; i++) {
         const imgToAdd = $('<img>').attr('src', artArr[i]).addClass('artImage');
         $('#carouselImage').append(imgToAdd);
     }

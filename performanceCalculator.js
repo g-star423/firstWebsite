@@ -21,27 +21,9 @@ let portfolioBMV = null;
 let portfolioEMV = null;
 let portfolioReturn = null;
 
-
-// function getStockData(date, ticker, nextFunc) {
-//     $.ajax({
-//         url: 'https://api.polygon.io/v1/open-close/' + ticker + '/' + date + '?adjusted=true&apiKey=IK60Z7z6FFgT_8LIJy3nud0g14J_GSHW'
-//     }).then(// the code below only runs once result is gotten.
-//         (data) => {
-//             stockData.push(data);
-//             console.log(stockData[stockData.length - 1]);
-//             if (typeof nextFunc === 'function') {
-//                 nextFunc();
-//             }
-//         },
-//         () => {// error handler
-//             console.log('request failed or bad request')
-//         }
-//     );
-// }
-
 function getStockData(date, ticker) {
     return $.ajax({
-        url: 'https://api.polygon.io/v1/open-close/' + ticker + '/' + date + '?adjusted=true&apiKey=IK60Z7z6FFgT_8LIJy3nud0g14J_GSHW'
+        url: 'https://api.polygon.io/v1/open-close/' + ticker + '/' + date + '?adjusted=true&apiKey=' + 'X7t3jMWJQLmt918UEHtxNmLDcNnpFSuo'
     })
 }
 
