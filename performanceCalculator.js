@@ -23,7 +23,7 @@ let portfolioReturn = null;
 
 function getStockData(date, ticker) {
     return $.ajax({
-        url: 'https://api.polygon.io/v1/open-close/' + ticker + '/' + date + '?adjusted=true&apiKey=' + 'X7t3jMWJQLmt918UEHtxNmLDcNnpFSuo'
+        url: 'https://api.polygon.io/v1/open-close/' + ticker + '/' + date + '?adjusted=true&apiKey=' + 'X7t3jMWJQLmt918UEHtxNmLDcNnpFSuo' // This key would be hidden on a real site, but this is outside the scope of the current project.
     })
 }
 

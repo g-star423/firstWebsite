@@ -1,5 +1,6 @@
-// $(()=>{
-//     $('#links').click(()=>{
-//         $('.dropdown').slideToggle();
-//     })
-// })
+
+$(() => {
+    $('#mobileNav').click(() => {
+        $('#mobileNavLinks').toggle();
+    })
+})

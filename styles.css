@@ -7,6 +7,7 @@ header {
     display: flex;
     border-bottom: solid black 3px;
     height: 6em;
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -166,4 +167,23 @@ td {
 
 #bioPic {
     width: 200px;
+}
+
+#mobileNav {
+    display: none;
+}
+
+#mobileNavLinks {
+    display: none;
+    width: 90%;
+}
+
+@media (max-width: 700px) {
+    header nav {
+        display: none;
+    }
+
+    #mobileNav {
+        display: block
+    }
 }
