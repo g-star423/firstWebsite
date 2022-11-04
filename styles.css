@@ -6,16 +6,16 @@ body {
 header {
     display: flex;
     border-bottom: solid black 3px;
-    height: 6em;
-    flex-wrap: wrap;
+    height: 4em;
+    max-width: 900px;
 }
 
 header h1 {
-    height: 6em;
+    height: 3.5em;
     margin: 10px;
     text-align: center;
     font-family: 'Staatliches', cursive;
-    font-size: 5vw;
+    font-size: 3.0em;
 }
 
 main {
@@ -31,11 +31,10 @@ nav {
     margin-left: auto;
 }
 
-a {
+nav ul li a {
     text-decoration: none;
     color: black;
     padding-top: 1.5em;
-
 }
 
 img {
@@ -52,6 +51,15 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+header div ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.75em;
 }
 
 nav li {
@@ -175,10 +183,20 @@ td {
 
 #mobileNavLinks {
     display: none;
-    width: 90%;
+    width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    header h1 {
+        height: auto;
+        font-size: 2.5em;
+    }
+
     header nav {
         display: none;
     }

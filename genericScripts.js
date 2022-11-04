@@ -1,6 +1,7 @@
 
 $(() => {
-    $('#mobileNav').click(() => {
-        $('#mobileNavLinks').toggle();
+    $('#mobileNav').click((event) => {
+        event.preventDefault();
+        $('#mobileNavLinks').toggle(600);
     })
 })
