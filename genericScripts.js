@@ -2,6 +2,6 @@
 $(() => {
     $('#mobileNav').click((event) => {
         event.preventDefault();
-        $('#mobileNavLinks').toggle(600);
+        $('#mobileNavLinks').toggle(500);
     })
 })
