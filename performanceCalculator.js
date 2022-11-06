@@ -1,4 +1,4 @@
-const samplePortfolio = [
+const samplePortfolio = [// used for testing
     { stock: 'TROW', quantity: 750, begPrice: 87.5, endPrice: 99 },
     { stock: 'ABNB', quantity: 2000, begPrice: 75.5, endPrice: 76 },
 ];
@@ -20,14 +20,15 @@ let stock2Return = null;
 let portfolioBMV = null;
 let portfolioEMV = null;
 let portfolioReturn = null;
-
+// This API key would be hidden on a real site, but this is outside the scope of the current project.
+// The function below interacts with the API, and it returns an AJAX function itself, which will include both data and a promise.
 function getStockData(date, ticker) {
     return $.ajax({
-        url: 'https://api.polygon.io/v1/open-close/' + ticker + '/' + date + '?adjusted=true&apiKey=' + 'X7t3jMWJQLmt918UEHtxNmLDcNnpFSuo' // This key would be hidden on a real site, but this is outside the scope of the current project.
+        url: 'https://api.polygon.io/v1/open-close/' + ticker + '/' + date + '?adjusted=true&apiKey=' + 'X7t3jMWJQLmt918UEHtxNmLDcNnpFSuo'
     })
 }
 
-const getAllData = () => {
+const getAllData = () => {// This is the function that collects everything into a promise all function and runs our function for API interaction.
     startDate = $("#startDate").val();
     endDate = $("#endDate").val();
     stock1 = $("#ticker1").val();
@@ -69,7 +70,7 @@ const calculatePerformance = () => {
             stock2EndPrice = stockData[i].close
         }
     }
-    let stock1Obj = {
+    let stock1Obj = {// manually created objects for each stock, as well as the total portfolio.
         ticker: stock1,
         begPrice: stock1BegPrice,
         endPrice: stock1EndPrice,
@@ -97,12 +98,12 @@ const calculatePerformance = () => {
         EMV: portfolioOutput[0].EMV + portfolioOutput[1].EMV,
         return: (((portfolioOutput[0].EMV + portfolioOutput[1].EMV) - (portfolioOutput[0].BMV + portfolioOutput[1].BMV)) / (portfolioOutput[0].BMV + portfolioOutput[1].BMV)).toFixed(2)
     }
-    portfolioOutput.push(portObj)
+    portfolioOutput.push(portObj)// pushing objects into an array before processing in printPerformance function.
     console.log(portfolioOutput)
     printPerformance();
 }
 
-const printPerformance = () => {
+const printPerformance = () => {// This function takes in an array of objects and creates table rows via jQuery, then outputs them to the page.
     for (let i = 0; i < portfolioOutput.length; i++) {
         const $tr = $('<tr>');
         const $td1 = $('<td>').text(portfolioOutput[i].ticker);
@@ -122,7 +123,7 @@ const printPerformance = () => {
 }
 
 $(() => {
-    $('#stockForm').on('submit', (event) => {
+    $('#stockForm').on('submit', (event) => {// form submission triggers chain of functions above.
         event.preventDefault();
         getAllData();
     });

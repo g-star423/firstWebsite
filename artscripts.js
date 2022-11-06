@@ -3,7 +3,7 @@ const artExplanations = ['Title: Moneyshot<br>This painting ', 'movement', 'self
 let currentImgIndex = 0;
 let numOfImages = artArr.length - 1;
 
-
+// This script contains the basic code to make a carousel work.
 
 function carouselLeft() {
     console.log('carousel left');
