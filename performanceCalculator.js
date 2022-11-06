@@ -96,7 +96,7 @@ const calculatePerformance = () => {
         endPrice: "n/a",
         BMV: portfolioOutput[0].BMV + portfolioOutput[1].BMV,
         EMV: portfolioOutput[0].EMV + portfolioOutput[1].EMV,
-        return: (((portfolioOutput[0].EMV + portfolioOutput[1].EMV) - (portfolioOutput[0].BMV + portfolioOutput[1].BMV)) / (portfolioOutput[0].BMV + portfolioOutput[1].BMV)).toFixed(2)
+        return: (((portfolioOutput[0].EMV + portfolioOutput[1].EMV) - (portfolioOutput[0].BMV + portfolioOutput[1].BMV)) / (portfolioOutput[0].BMV + portfolioOutput[1].BMV) * 100).toFixed(2)
     }
     portfolioOutput.push(portObj)// pushing objects into an array before processing in printPerformance function.
     console.log(portfolioOutput)

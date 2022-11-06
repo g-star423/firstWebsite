@@ -346,4 +346,8 @@ td {
     .footerCard {
         width: 150px;
     }
+
+    #artFooter {
+        margin-top: 10em;
+    }
 }
