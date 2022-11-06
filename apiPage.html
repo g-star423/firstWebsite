@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="app.js"></script>
+    <script src="genericScripts.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Greg Shoup</title>
 </head>
 
@@ -24,13 +27,27 @@
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="art.html">Art</a></li>
-                <li><a href="links.html" id="links">Links</a></li>
             </ul>
         </nav>
+        <div id="mobileNav"><span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>
+        <div id="mobileNavLinks">
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="art.html">Art</a></li>
+            </ul>
+        </div>
+
     </header>
     <main>
         <p>RELATED WORDS!</p>
-        <p>This page will get data from the Datamuse API, and return the five most related words on the internet to the
+        <p>This page will get data from the <a href="https://www.datamuse.com/api/>">Datamuse API</a>, and return the
+            five most related words on the internet to the
             input.</p>
         <form id="wordForm">
             <input type="text" id="wordInputText" placeholder="input word here" />
@@ -42,7 +59,16 @@
         </div>
     </main>
     <footer>
-        <p>Data from <a href="https://www.datamuse.com/api/>">Datamuse.api</a></p>
+        <a href="https://github.com/g-star423">
+            <div class="footerCard" id="git">
+                GitHub
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/gregshoup/">
+            <div class="footerCard" id="linkedIn">
+                LinkedIn
+            </div>
+        </a>
     </footer>
 </body>
 

@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Greg Shoup</title>
 </head>
 
@@ -27,23 +29,48 @@
                 <li><a href="links.html" id="links">Links</a></li>
             </ul>
         </nav>
+        <div id="mobileNav"><span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>
+        <div id="mobileNavLinks">
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="links.html" id="links">Links</a></li>
+            </ul>
+        </div>
+
     </header>
     <main>
-        <div id="flexDiv">
-            <div class="linkDiv" id="git">
-                Datamuse API Page
-                <a href="apiPage.html">
-                    <span class="link"></span>
-                </a>
-            </div>
-            <div class="linkDiv" id="git">
-                Stock Portfolio Calculator
-                <a href="stockPortfolio.html">
-                    <span class="link"></span>
-                </a>
-            </div>
+        <div class="textDiv">
+            <p>Below you can find a few projects I have made for my portfolio. These will grow and change over the next
+                few
+                months.</p>
+        </div>
+        <div class="navCardContainer">
+            <div class="navCard" id="second"><a class="navA" href="stockPortfolio.html">Stock Portfolio
+                    Calculator<br><br><span class="linkText">A simple stock portfolio return calculator that gets info
+                        from an API.</span></a></div>
+            <div class="navCard" id="third"><a class="navA" href="apiPage.html">First API Project<br><br><span
+                        class="linkText">My first tests getting data from an API.</span></a></div>
         </div>
     </main>
+    <footer>
+        <a href="https://github.com/g-star423">
+            <div class="footerCard" id="git">
+                GitHub
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/gregshoup/">
+            <div class="footerCard" id="linkedIn">
+                LinkedIn
+            </div>
+        </a>
+    </footer>
 </body>
 
 </html>
