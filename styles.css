@@ -350,4 +350,9 @@ td {
     #artFooter {
         margin-top: 10em;
     }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 }
