@@ -24,6 +24,10 @@ main {
     align-items: center;
 }
 
+main h1 {
+    text-align: center;
+}
+
 nav {
     justify-content: space-evenly;
     font-family: 'Alata', sans-serif;
@@ -261,6 +265,7 @@ td {
 .textDiv {
     width: 90%;
     max-width: 500px;
+    text-align: center;
 }
 
 #bioPic {
